@@ -208,31 +208,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/home"
             android:contentDescription="Home"
-            android:tint="@color/black"
+
             android:layout_gravity="center" />
 
         <!-- Tab Icon 2 -->
         <ImageView
-            android:id="@+id/searchTab"
+            android:id="@+id/bookmarkTab"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_foreground"
-            android:contentDescription="Search"
-            android:tint="@color/black"
+            android:src="@drawable/bookmark"
+
             android:layout_gravity="center" />
 
         <!-- Tab Icon 3 -->
         <ImageView
-            android:id="@+id/favoritesTab"
+            android:id="@+id/notifiocationTab"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_foreground"
-            android:contentDescription="Favorites"
-            android:tint="@color/black"
+            android:src="@drawable/notification"
+
             android:layout_gravity="center" />
 
         <!-- Tab Icon 4 -->
@@ -241,9 +239,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher_foreground"
-            android:contentDescription="Profile"
-            android:tint="@color/black"
+            android:src="@drawable/profile"
+
             android:layout_gravity="center" />
     </LinearLayout>
 
