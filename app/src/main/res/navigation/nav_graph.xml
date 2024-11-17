@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <!-- HomeFragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mehnaz.gozayaanproject.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment">
+        <!-- Example of a navigation action -->
+        <action
+            android:id="@+id/action_home_to_details"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <!-- DetailsFragment -->
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.mehnaz.gozayaanproject.ui.fragments.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_details_to_recommended"
+            app:destination="@id/recommendedListFragment" />
+    </fragment>
+
+    <!-- RecommendedListFragment -->
+    <fragment
+        android:id="@+id/recommendedListFragment"
+        android:name="com.mehnaz.gozayaanproject.ui.fragments.RecommendedListFragment"
+        android:label="Recommended"
+        tools:layout="@layout/fragment_recommended_list">
+        <action
+            android:id="@+id/action_recommended_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>

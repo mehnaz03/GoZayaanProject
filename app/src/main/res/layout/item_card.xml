@@ -5,27 +5,29 @@
     android:layout_height="80dp"
     app:cardCornerRadius="15dp"
     app:cardElevation="4dp"
-    android:alpha="0.0"
+    android:alpha="1.0"
+    app:cardBackgroundColor="#2D303A"
+    android:layout_marginEnd="16dp">
 
-    android:layout_marginEnd="16dp"
-   >
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
 <ImageView
     android:layout_width="27dp"
     android:layout_height="27dp"
-    android:src="@drawable/ic_launcher_foreground"
-/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Item Title"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:padding="4dp" />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+    android:id="@+id/image"
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/title"
+    android:textColor="#E6FFFFFF"
+    android:textSize="12sp"
+    android:gravity="center"
+    android:padding="4dp" />
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
