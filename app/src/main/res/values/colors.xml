@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorBackground">#1D2026</color>
+    <color name="subtitlecolor">#E6FFFFFF</color>
+    <color name="categorybackgroundcolor">#2D303A</color>
+    <color name="titleColor">#ffffff</color>
 </resources>

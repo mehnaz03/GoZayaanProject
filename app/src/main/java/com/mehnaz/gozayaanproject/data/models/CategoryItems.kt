@@ -1,6 +1,9 @@
 package com.mehnaz.gozayaanproject.data.models
 
+import androidx.annotation.Keep
+
+@Keep
 data class CategoryItems(
     val name: String,
-    val imageResId: Int // Resource ID of the image (e.g., R.drawable.example)
+    val imageResId: Int
 )

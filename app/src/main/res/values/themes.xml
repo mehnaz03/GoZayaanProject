@@ -16,4 +16,14 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">10dp</item>
     </style>
+    <style name="RoundedBottomCorners">
+        <item name="shapeAppearanceOverlay">@style/RoundedBottomShape</item>
+    </style>
+
+    <style name="RoundedBottomShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSize">20dp</item>
+    </style>
 </resources>

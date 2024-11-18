@@ -12,21 +12,20 @@ import com.bumptech.glide.Glide
 import com.mehnaz.gozayaanproject.R
 import com.mehnaz.gozayaanproject.data.models.CategoryItems
 import com.mehnaz.gozayaanproject.data.models.Property
-import com.mehnaz.gozayaanproject.databinding.HomeRecommendedItemBinding
+import com.mehnaz.gozayaanproject.databinding.ItemRecommendedCardBinding
+
+class RecommendedAdapter(private val propertyList: List<Property>, private val onItemClickListener: (Property) -> Unit) : RecyclerView.Adapter<RecommendedAdapter.RecommendedViewHolder>() {
 
 
-class HomeRecommendedAdapter(private val propertyList: List<Property>,private val onItemClickListener: (Property) -> Unit) : RecyclerView.Adapter<HomeRecommendedAdapter.HomeRecommendedViewHolder>() {
+    inner class RecommendedViewHolder(val binding: ItemRecommendedCardBinding) : RecyclerView.ViewHolder(binding.root)
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecommendedViewHolder {
 
-    inner class HomeRecommendedViewHolder(val binding: HomeRecommendedItemBinding) : RecyclerView.ViewHolder(binding.root)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeRecommendedViewHolder {
-
-        val binding = HomeRecommendedItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return HomeRecommendedViewHolder(binding)
+        val binding = ItemRecommendedCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecommendedViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HomeRecommendedViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecommendedViewHolder, position: Int) {
 
         val property = propertyList[position]
         holder.binding.root.setOnClickListener {

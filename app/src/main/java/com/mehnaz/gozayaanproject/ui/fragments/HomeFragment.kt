@@ -1,6 +1,7 @@
 package com.mehnaz.gozayaanproject.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -79,6 +80,16 @@ class HomeFragment : Fragment() {
             }
             binding.recyclerrecommended.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             binding.recyclerrecommended.adapter = recommendedadapter
+
+            binding.btnSeeAll.setOnClickListener {
+                val recommendedList = homeViewModel.properties.value // Get the list of properties
+                Log.e("TAG","Recommendedlist: "+ recommendedList)
+                val bundle = Bundle().apply {
+                    putSerializable("recommendedList", ArrayList(recommendedList)) // Send data as a bundle
+                }
+
+                findNavController().navigate(R.id.action_home_to_recommendedListFragment, bundle)
+            }
         })
 
 

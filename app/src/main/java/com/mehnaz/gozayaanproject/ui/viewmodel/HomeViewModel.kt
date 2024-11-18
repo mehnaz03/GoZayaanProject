@@ -1,5 +1,6 @@
 package com.mehnaz.gozayaanproject.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -18,11 +19,15 @@ class HomeViewModel(private val repository: Repository) : ViewModel() {
     fun fetchProperties() {
         viewModelScope.launch {
             try {
-                // Fetch properties from the repository
+
                 val result = repository.fetchProperties()
-                _properties.postValue(result)
+                if (result.isNotEmpty()) {
+                    _properties.postValue(result)
+                }else{
+                    Log.e("TAG","Exception: " + result)
+                }
             } catch (e: Exception) {
-                // Handle errors
+               Log.e("TAG","Exception: " + e)
             }
         }
     }

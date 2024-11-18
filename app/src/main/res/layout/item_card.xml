@@ -6,7 +6,7 @@
     app:cardCornerRadius="15dp"
     app:cardElevation="4dp"
     android:alpha="1.0"
-    app:cardBackgroundColor="#2D303A"
+    app:cardBackgroundColor="@color/categorybackgroundcolor"
     android:layout_marginEnd="16dp">
 
 <LinearLayout
@@ -25,7 +25,7 @@ android:gravity="center">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/title"
-    android:textColor="#E6FFFFFF"
+    android:textColor="@color/subtitlecolor"
     android:textSize="12sp"
     android:gravity="center"
     android:padding="4dp" />

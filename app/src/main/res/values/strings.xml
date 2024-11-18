@@ -2,4 +2,8 @@
     <string name="app_name">GoZayaanProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recommended">Recommended</string>
+    <string name="about_the_trip">About the trip</string>
+    <string name="book_now">Book Now</string>
+    <string name="popular_categories">Popular Categories</string>
 </resources>
